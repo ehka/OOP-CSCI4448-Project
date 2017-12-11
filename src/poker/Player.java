@@ -7,10 +7,10 @@ public class Player {
 	public int chips;
 	
 	public void signup(String name, String password) {
-		
+		System.out.println("Signup was successfull");
 	}
 	public void login(String name, String password) {
-		
+		System.out.println("Login was successfull");
 	}
 	public void add_friend(String name) {
 		
