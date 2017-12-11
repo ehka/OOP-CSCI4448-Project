@@ -24,7 +24,7 @@ public class Main {
 			password = scanner.nextLine();
 			p.login(username, password);
 		}
-		if(i == 2) {
+		else if(i == 2) {
 			System.out.println("Enter your username: ");
 			scanner = new Scanner(System.in);
 			username = scanner.nextLine();
@@ -93,26 +93,24 @@ public class Main {
 			poker.cards = cards_52;
 			System.out.println("Dealing Cards...");
 			ArrayList<Cards> deal_cards = new ArrayList<Cards>();
+			
 			ArrayList<Cards> result = poker.deal(deal_cards, ob);
-			System.out.println("Your cards are:");
-			System.out.printf("%s %n\n %s %n\n", result.get(0).suit,result.get(0).value
-					, result.get(1).suit,result.get(1).value);
 			
 			
 		}
-		if(i == 2 ) {
+		else if(i == 2 ) {
 			Game game = new Game();
 			game.join_game(p);
 			System.out.println("You just joined a Game!");
 			
 		}
-		if(i == 3) {
+		else if(i == 3) {
 			System.out.println(p.view_score());
 		}
-		if(i == 4) {
+		else if(i == 4) {
 			System.out.println(p.view_friends());
 		}
-		if(i == 5) {
+		else if(i == 5) {
 			System.exit(0);
 		}
 		
