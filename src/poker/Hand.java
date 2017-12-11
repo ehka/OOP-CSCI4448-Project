@@ -1,7 +1,8 @@
 package poker;
+import java.util.ArrayList;
 
 public class Hand implements Observer{
-	public Cards[] hand;
+	public ArrayList<Cards> hand = new ArrayList<Cards>();
 	public Cards[] five_card;
 	
 	private Cards[] determine_five_best(Poker p) {

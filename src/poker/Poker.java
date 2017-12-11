@@ -1,4 +1,7 @@
 package poker;
+import java.util.ArrayList;
+import java.util.Random;
+
 
 public class Poker {
 	public Cards[] cards;
@@ -6,8 +9,15 @@ public class Poker {
 	public int pot;
 	public Observer[] observers;
 	
-	public Cards[] deal(Observer ob) {
-		return cards;
+	public ArrayList<Cards> deal(ArrayList<Cards> deal_cards, Observer ob) {
+		
+		Random rand = new Random();
+		int  n = rand.nextInt(51) + 1;
+		deal_cards.add(cards[n]);
+		rand = new Random();
+		n = rand.nextInt(51) + 1;
+		deal_cards.add(cards[n]);
+		return deal_cards;
 	}
 	public Cards[] flop(Cards flop_cards, Observer ob) {
 		return cards;

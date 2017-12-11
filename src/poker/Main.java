@@ -5,6 +5,7 @@ import java.util.*;
 
 public class Main {
 	public String[][] players;
+	@SuppressWarnings("null")
 	public static void main(String [] args) {
 		String username;
 		String password;
@@ -60,35 +61,43 @@ public class Main {
 			System.out.println("You entered a game!");
 			Poker poker = new Poker();
 			Cards[] cards_52 = new Cards[52];
+			
 			int j = 0;
 			int k = 1;
 			for(j=0; j<12; j++ ) {
+				cards_52[j] = new Cards();
 				cards_52[j].suit = "Diamonds";
 				cards_52[j].value = k++; 
 			}
 			k = 1;
 			for(j=13; j<25; j++ ) {
+				cards_52[j] = new Cards();
 				cards_52[j].suit = "Hearts";
 				cards_52[j].value = k++; 
 			}
 			k = 1;
 			for(j=26; j<38; j++ ) {
+				cards_52[j] = new Cards();
 				cards_52[j].suit = "Spades";
 				cards_52[j].value = k++; 
 			}
 			k = 1;
 			for(j=39; j<51; j++ ) {
+				cards_52[j] = new Cards();
 				cards_52[j].suit = "Clubs";
 				cards_52[j].value = k++; 
 			}
 			
-			poker.cards = cards_52;
-			
-			
-			
-			
+				
 			Observer ob = null;
-			poker.deal(ob);
+			poker.cards = cards_52;
+			System.out.println("Dealing Cards...");
+			ArrayList<Cards> deal_cards = new ArrayList<Cards>();
+			ArrayList<Cards> result = poker.deal(deal_cards, ob);
+			System.out.println("Your cards are:");
+			System.out.printf("%s %n\n %s %n\n", result.get(0).suit,result.get(0).value
+					, result.get(1).suit,result.get(1).value);
+			
 			
 		}
 		if(i == 2 ) {
