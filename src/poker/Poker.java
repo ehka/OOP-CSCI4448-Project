@@ -22,11 +22,32 @@ public class Poker {
 		System.out.printf("%s %d",cards[n].suit, cards[n].value);
 		return deal_cards;
 	}
-	public Cards[] flop(Cards flop_cards, Observer ob) {
-		return cards;
+	public ArrayList<Cards> flop(ArrayList<Cards> flop_cards, Observer ob) {
+		Random rand = new Random();
+		int  n = rand.nextInt(51) + 1;
+		flop_cards.add(cards[n]);
+		System.out.println("Your cards are:");
+		System.out.printf("%s %d \n",cards[n].suit, cards[n].value);
+		rand = new Random();
+		n = rand.nextInt(51) + 1;
+		flop_cards.add(cards[n]);
+		System.out.printf("%s %d",cards[n].suit, cards[n].value);
+		n = rand.nextInt(51) + 1;
+		flop_cards.add(cards[n]);
+		System.out.printf("%s %d \n",cards[n].suit, cards[n].value);
+		return flop_cards;
 	}
-	public Cards[] flip(Cards flip_cards, Observer ob) {
-		return cards;
+	public ArrayList<Cards> flip(ArrayList<Cards> flip_cards, Observer ob) {
+		Random rand = new Random();
+		int  n = rand.nextInt(51) + 1;
+		flip_cards.add(cards[n]);
+		System.out.println("Your cards are:");
+		System.out.printf("%s %d \n",cards[n].suit, cards[n].value);
+		rand = new Random();
+		n = rand.nextInt(51) + 1;
+		flip_cards.add(cards[n]);
+		System.out.printf("%s %d",cards[n].suit, cards[n].value);
+		return flip_cards;
 	}
 	public void update_pot (int chips) {
 		
