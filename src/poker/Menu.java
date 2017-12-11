@@ -31,7 +31,7 @@ public class Menu {
             System.exit(0);
         }
         else {
-            System.out.println("wrong iput!");
+            System.out.println("wrong input!");
         }
         System.out.println("Enter your username: ");
         Scanner scanner = new Scanner(System.in);
