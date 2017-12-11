@@ -4,6 +4,7 @@ import java.util.ArrayList;
 public class Hand implements Observer{
 	public ArrayList<Cards> hand = new ArrayList<Cards>();
 	public Cards[] five_card;
+	int hand_rate;
 	
 	private Cards[] determine_five_best(Poker p) {
 		return p.cards;
@@ -15,12 +16,12 @@ public class Hand implements Observer{
 	
 	@Override
 	public void update() {
-		
+		 hand_rate = determine_hand_rate();
 	}
 
 	@Override
-	public void add() {
-		// TODO Auto-generated method stub
+	public void add(Observer o, Poker p) {
+		p.observers.add(o);
 		
 	}
 }

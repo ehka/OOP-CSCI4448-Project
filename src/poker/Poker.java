@@ -7,7 +7,7 @@ public class Poker {
 	public Cards[] cards;
 	public Cards[] seven_cards;
 	public int pot;
-	public Observer[] observers;
+	public ArrayList<Observer> observers;
 	
 	public ArrayList<Cards> deal(ArrayList<Cards> deal_cards, Observer ob) {
 		
@@ -50,15 +50,17 @@ public class Poker {
 		return flip_cards;
 	}
 	public void update_pot (int chips) {
-		
+		pot += chips;
 	}
 	public void attach(Observer o) {
-		
+		observers.add(o);
 	}
 	public void notify1() {
-		
+		for(Observer obs : observers) {
+			obs.update();
+		}
 	}
 	public void detach(Observer o) {
-		
+		observers.remove(o);
 	}
 }
