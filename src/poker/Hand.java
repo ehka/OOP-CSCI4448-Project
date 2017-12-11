@@ -1,6 +1,6 @@
 package poker;
 
-public class Hand {
+public class Hand implements Observer{
 	public Cards[] hand;
 	public Cards[] five_card;
 	
@@ -12,7 +12,14 @@ public class Hand {
 		return 0;
 	}
 	
-	private void update() {
+	@Override
+	public void update() {
+		
+	}
+
+	@Override
+	public void add() {
+		// TODO Auto-generated method stub
 		
 	}
 }

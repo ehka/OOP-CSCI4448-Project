@@ -1,6 +1,6 @@
 package poker;
 
 public class Cards {
-	public String type;
+	public String suit;
 	public int value;
 }

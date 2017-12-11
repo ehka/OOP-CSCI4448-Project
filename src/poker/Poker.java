@@ -6,7 +6,7 @@ public class Poker {
 	public int pot;
 	public Observer[] observers;
 	
-	public Cards[] deal(Cards deal_cards, Observer ob) {
+	public Cards[] deal(Observer ob) {
 		return cards;
 	}
 	public Cards[] flop(Cards flop_cards, Observer ob) {
