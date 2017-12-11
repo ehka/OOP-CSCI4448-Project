@@ -33,23 +33,26 @@ public class Main {
 		else {
 			System.out.println("wrong iput!");
 		}
-		System.out.println("Enter your username: ");
-		Scanner scanner = new Scanner(System.in);
-		String username = scanner.nextLine();
-		System.out.println("Enter your passoword: ");
-		String password = scanner.nextLine();
 		System.out.println("1.Create a Game");
 		System.out.println("2.Join a Game");
-		System.out.println("3.Exit");
+		System.out.println("3.Check Score");
+		System.out.println("4.Exit");
 		i = sc.nextInt();
 		if(i == 1) {
 			System.out.println("1.Invite a Friend");
+			
 			System.out.println("2.Start a Game");
+			i = sc.nextInt();
+			if(i == 1) {
+				System.out.println("Enter your friend's name:");
+				String friend_name = sc.nextLine();
+				p.add_friend(friend_name);	
+			}
 		}
 		if(i == 2 ) {
 			System.out.println("You just joined a Game!");
 		}
-		if(i == 3) {
+		if(i == 4) {
 			System.exit(0);
 		}
 		
