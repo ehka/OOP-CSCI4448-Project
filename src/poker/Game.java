@@ -1,10 +1,11 @@
 package poker;
+import java.util.ArrayList;
 
 public class Game {
-	public Player[] player_list;
+	public ArrayList<Player> player_list = new ArrayList<Player>();
 	public int[] board;
 	
-	public void create_game(Player[] player_list) {
+	public void create_game() {
 		
 	}
 	public void join_game(Player p) {
