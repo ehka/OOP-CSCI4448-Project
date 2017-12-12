@@ -123,7 +123,8 @@ public class Main {
 					System.out.println("Enter how much you want to bet:");
 					i = sc.nextInt();
 					choice.bet(i);
-					System.out.println("Waiting for other the players");
+					System.out.printf("You bet %d ", i);
+					i = sc.nextInt();
 					break;
 				}
 				else if(i == 2) {
