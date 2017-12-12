@@ -7,6 +7,7 @@ public class Hand implements Observer{
 	int hand_rate;
 	
 	private Cards[] determine_five_best(Poker p) {
+		
 		return p.cards;
 	}
 	

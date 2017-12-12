@@ -54,7 +54,20 @@ public class Main {
 				p.add_friend(friend_name);
 				System.out.println("Your friend was invited.");
 			}
-			System.out.println("creating a game...");
+			System.out.println("Ready to start? Y/N");
+			String ans;
+			ans = scanner.nextLine();
+			while(true) {
+			if(ans.equals("Y")) {
+				System.out.println("creating a game...");
+				break;
+			}
+			else if(ans.equals("N")) {
+				System.exit(0);
+			}
+			else
+				continue;
+			}
 			Game game = new Game();
 			game.player_list.add(p);
 			game.create_game();
@@ -96,6 +109,38 @@ public class Main {
 			
 			ArrayList<Cards> result = poker.deal(deal_cards, ob);
 			
+			System.out.println("\n\n1.bet");
+			System.out.println("2.check");
+			System.out.println("3.fold");
+			System.out.println("4.leave");
+			
+			i = sc.nextInt();
+			Choice choice = new Choice();
+			while(true) {
+				if(i == 1) {
+					System.out.println("Enter how much you want to bet:");
+					i = sc.nextInt();
+					choice.bet(i);
+					System.out.println("Waiting for other the players");
+					break;
+				}
+				else if(i == 2) {
+					choice.check();
+					System.out.println("You checked.");
+					break;
+				}
+				else if(i == 3) {
+					choice.fold();
+					System.out.println("You folded.");
+					break;
+				}
+				else if(i == 4) {
+					System.out.println("Left the table");
+					System.exit(0);
+				}
+				else
+					continue;
+			}
 			
 		}
 		else if(i == 2 ) {
