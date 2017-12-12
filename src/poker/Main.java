@@ -71,7 +71,7 @@ public class Main {
 			}
 			Game game = new Game();
 			game.player_list.add(p);
-			game.create_game();
+			game.create_game(p);
 			System.out.println("You entered a game!");
 			Poker poker = new Poker();
 			Cards[] cards_52 = new Cards[52];
