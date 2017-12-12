@@ -13,10 +13,10 @@ public class Player {
 		System.out.println("Login was successfull");
 	}
 	public void add_friend(String name) {
-		
+        friends.add(name);
 	}
 	public int view_score() {
-		return 0;
+		return score;
 	}
 	public String[] view_friends(){
 		return friends;
