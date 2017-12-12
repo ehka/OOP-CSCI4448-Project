@@ -9,10 +9,11 @@ public class Choice {
 	}
 
 	public int check() {
-		return 0;
+        p.update_pot(0);
+        return 0;
 	}
 
 	public void fold() {
-		
+		p.cards = Cards[];
 	}
 }
