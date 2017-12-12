@@ -10,6 +10,7 @@ public class Main {
 		String username;
 		String password;
 		Player p = new Player();
+		System.out.println("WELCOME TO OO POKER:\n");
 		System.out.println("1.Log in");
 		System.out.println("2.Sign up");
 		System.out.println("3.Exit");
@@ -116,6 +117,7 @@ public class Main {
 			
 			i = sc.nextInt();
 			Choice choice = new Choice();
+			choice.p = poker;
 			while(true) {
 				if(i == 1) {
 					System.out.println("Enter how much you want to bet:");
